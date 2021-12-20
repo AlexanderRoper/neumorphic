@@ -53,6 +53,7 @@ public struct SoftDynamicButtonStyle<S: Shape> : ButtonStyle {
                         
                         shape.fill(mainColor)
                             .softOuterShadow(darkShadow: darkShadowColor, lightShadow: lightShadowColor, offset: 6, radius: 3)
+                            .softInnerShadow(shape, darkShadow: darkShadowColor, lightShadow: lightShadowColor)
                             .opacity(pressedEffect == .none ? 1 : (configuration.isPressed ? 0 : 1) )
                     }
                 )
