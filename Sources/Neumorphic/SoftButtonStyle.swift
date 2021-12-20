@@ -47,7 +47,7 @@ public struct SoftDynamicButtonStyle<S: Shape> : ButtonStyle {
                         }
                         else if pressedEffect == .hard {
                             shape.fill(mainColor)
-                                .softInnerShadow(shape, darkShadow: darkShadowColor, lightShadow: lightShadowColor, spread: 0.15, radius: 3)
+                                .softInnerShadow(shape, darkShadow: darkShadowColor, lightShadow: lightShadowColor, spread: 0.4, radius: 1)
                                 .opacity(configuration.isPressed ? 1 : 0)
                         }
                         
