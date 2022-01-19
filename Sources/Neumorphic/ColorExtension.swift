@@ -9,10 +9,10 @@ public extension Color {
         private static let defaultLightShadowSolidColor = NeumorphicKit.colorType(red: 1.000, green: 1.000, blue: 1.000)
         private static let defaultDarkShadowSolidColor = NeumorphicKit.colorType(red: 0.820, green: 0.851, blue: 0.902)
 
-        private static let darkThemeMainColor = NeumorphicKit.colorType(red: 0.188, green: 0.192, blue: 0.208)
+        private static let darkThemeMainColor = NeumorphicKit.colorType(red: 0.145, green: 0.157, blue: 0.216)
         private static let darkThemeSecondaryColor = NeumorphicKit.colorType(red: 0.910, green: 0.910, blue: 0.910)
-        private static let darkThemeLightShadowSolidColor = NeumorphicKit.colorType(red: 0.243, green: 0.247, blue: 0.275)
-        private static let darkThemeDarkShadowSolidColor = NeumorphicKit.colorType(red: 0.137, green: 0.137, blue: 0.137)
+        private static let darkThemeLightShadowSolidColor = NeumorphicKit.colorType(red: 0.209, green: 0.226, blue: 0.313)
+        private static let darkThemeDarkShadowSolidColor = NeumorphicKit.colorType(red: 0.106, green: 0.115, blue: 0.161)
                 
         public static var colorSchemeType : NeumorphicKit.ColorSchemeType {
             get {
