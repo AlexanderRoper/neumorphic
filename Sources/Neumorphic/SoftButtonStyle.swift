@@ -22,7 +22,7 @@ public struct SoftDynamicButtonStyle<S: Shape> : ButtonStyle {
     var pressedEffect : SoftButtonPressedEffect
     var padding : CGFloat
     
-    public init(_ shape: S, mainColor : Color, textColor : Color, darkShadowColor: Color, lightShadowColor: Color, pressedEffect : SoftButtonPressedEffect, padding : CGFloat = 16) {
+    public init(_ shape: S, mainColor : Color, textColor : Color, darkShadowColor: Color, lightShadowColor: Color, pressedEffect : SoftButtonPressedEffect, padding : CGFloat = UIScreen.main.bounds.width * 0.038647) {
         self.shape = shape
         self.mainColor = mainColor
         self.textColor = textColor
@@ -101,7 +101,7 @@ public struct SoftButtonStyle<S: Shape> : ButtonStyle {
 
 extension Button {
 
-    public func softButtonStyle<S : Shape>(_ content: S, padding : CGFloat = 16, mainColor : Color = Color.Neumorphic.main, textColor : Color = Color.Neumorphic.secondary, darkShadowColor: Color = Color.Neumorphic.darkShadow, lightShadowColor: Color = Color.Neumorphic.lightShadow, pressedEffect : SoftButtonPressedEffect = .hard) -> some View {
+    public func softButtonStyle<S : Shape>(_ content: S, padding : CGFloat = UIScreen.main.bounds.width * 0.038647, mainColor : Color = Color.Neumorphic.main, textColor : Color = Color.Neumorphic.secondary, darkShadowColor: Color = Color.Neumorphic.darkShadow, lightShadowColor: Color = Color.Neumorphic.lightShadow, pressedEffect : SoftButtonPressedEffect = .hard) -> some View {
         self.buttonStyle(SoftDynamicButtonStyle(content, mainColor: mainColor, textColor: textColor, darkShadowColor: darkShadowColor, lightShadowColor: lightShadowColor, pressedEffect : pressedEffect, padding:padding))
     }
 
