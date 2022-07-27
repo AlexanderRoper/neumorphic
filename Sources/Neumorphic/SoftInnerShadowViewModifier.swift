@@ -12,7 +12,7 @@ private struct SoftInnerShadowViewModifier<S: Shape> : ViewModifier {
     var darkShadowColor : Color = .black
     var lightShadowColor : Color = .white
     var spread: CGFloat = 0.5    //The value of spread is between 0 to 1. Higher value makes the shadow look more intense.
-    var radius: CGFloat = 10
+    var radius: CGFloat = UIScreen.main.bounds.width * 0.02415
     
     init(shape: S, darkShadowColor: Color, lightShadowColor: Color, spread: CGFloat, radius:CGFloat) {
         self.shape = shape
@@ -78,7 +78,7 @@ private struct SoftInnerShadowViewModifier<S: Shape> : ViewModifier {
 //For more readable, we extend the View and create a softInnerShadow function.
 extension View {
 
-    public func softInnerShadow<S : Shape>(_ content: S, darkShadow: Color = Color.Neumorphic.darkShadow, lightShadow: Color = Color.Neumorphic.lightShadow, spread: CGFloat = 0.5, radius: CGFloat = 10) -> some View {
+    public func softInnerShadow<S : Shape>(_ content: S, darkShadow: Color = Color.Neumorphic.darkShadow, lightShadow: Color = Color.Neumorphic.lightShadow, spread: CGFloat = 0.5, radius: CGFloat = UIScreen.main.bounds.width * 0.02415) -> some View {
         modifier(
             SoftInnerShadowViewModifier(shape: content, darkShadowColor: darkShadow, lightShadowColor: lightShadow, spread: spread, radius: radius)
         )
